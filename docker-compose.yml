@@ -1,0 +1,18 @@
+version: "2"
+
+services:
+    clients:
+        build: ./clients
+        ports:
+            - "80:8080"
+        depends_on:
+            - orderAPI
+        labels:
+            com.microsoft.acs.dcos.marathon.healthcheck.path: '/'
+
+    orderAPI:
+        build: ./orderAPI
+        expose:
+            - "8080:8008"
+        labels:
+            com.microsoft.acs.dcos.marathon.healthcheck.path: '/'
