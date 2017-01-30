@@ -13,6 +13,6 @@ services:
     orderAPI:
         build: ./orderAPI
         expose:
-            - "8080:8008"
+            - "8008"
         labels:
             com.microsoft.acs.dcos.marathon.healthcheck.path: '/'
