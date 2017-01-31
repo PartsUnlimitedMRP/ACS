@@ -6,7 +6,7 @@ services:
         ports:
             - "80:8080"
         depends_on:
-            - orderAPI
+            - orderapi
         labels:
             com.microsoft.acs.dcos.marathon.healthcheck.path: '/'
 
