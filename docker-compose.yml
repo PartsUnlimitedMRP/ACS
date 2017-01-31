@@ -9,8 +9,8 @@ services:
             - orderapi
         labels:
             com.microsoft.acs.dcos.marathon.healthcheck.path: '/'
-            com.microsoft.acs.dcos.marathon.cpus: '1'
-            com.microsoft.acs.dcos.marathon.mem: '512'
+            com.microsoft.acs.dcos.marathon.cpus: 1
+            com.microsoft.acs.dcos.marathon.mem: 512
 
     orderapi:
         build: ./orderapi
@@ -18,5 +18,5 @@ services:
             - "8080"
         labels:
             com.microsoft.acs.dcos.marathon.healthcheck.path: '/'
-            com.microsoft.acs.dcos.marathon.cpus: '1'
-            com.microsoft.acs.dcos.marathon.cpus: '1024'
+            com.microsoft.acs.dcos.marathon.cpus: 1
+            com.microsoft.acs.dcos.marathon.mem: 1024
