@@ -4,15 +4,19 @@ services:
     clients:
         build: ./clients
         ports:
-            - "80:8080"
+            - "8080:80"
         depends_on:
             - orderapi
         labels:
             com.microsoft.acs.dcos.marathon.healthcheck.path: '/'
+            com.microsoft.acs.dcos.marathon.cpus: '1'
+            com.microsoft.acs.dcos.marathon.mem: '512'
 
     orderapi:
         build: ./orderapi
         expose:
-            - "8008"
+            - "8080"
         labels:
             com.microsoft.acs.dcos.marathon.healthcheck.path: '/'
+            com.microsoft.acs.dcos.marathon.cpus: '1'
+            com.microsoft.acs.dcos.marathon.cpus: '1024'
