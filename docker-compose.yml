@@ -11,7 +11,7 @@ services:
             com.microsoft.acs.dcos.marathon.healthcheck.path: '/'
 
     orderAPI:
-        build: ./orderAPI
+        build: ./orderapi
         expose:
             - "8008"
         labels:
